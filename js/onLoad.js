@@ -29,7 +29,7 @@ $.fn.renderCube = function() {
 
 
 			$(this).css({
-						'background-color': 'hsla(0, 80%, 40%, 0.5)',
+						'background-color': 'hsla(0, 80%, 40%, 0.75)',
 						'-webkit-transform': 'translateZ(' + elementWidth / 2 + 'px)',
 						   '-moz-transform': 'translateZ(' + elementWidth / 2 + 'px)',
 						    '-ms-transform': 'translateZ(' + elementWidth / 2 + 'px)',
@@ -40,7 +40,7 @@ $.fn.renderCube = function() {
 		} else if($(this).hasClass('top')) {
 
 			$(this).css({
-				'background-color': 'hsla(72, 80%, 40%, 0.5)',
+				'background-color': 'hsla(72, 80%, 40%, 0.75)',
 						'-webkit-transform': 'rotateX(90deg) translateZ(' + elementHeight / 2 + 'px)',
 						   '-moz-transform': 'rotateX(90deg) translateZ(' + elementHeight / 2 + 'px)',
 						    '-ms-transform': 'rotateX(90deg) translateZ(' + elementHeight / 2 + 'px)',
@@ -51,7 +51,7 @@ $.fn.renderCube = function() {
 		} else if($(this).hasClass('right')) {
 
 			$(this).css({
-				'background-color': 'hsla(144, 80%, 40%, 0.5)',
+				'background-color': 'hsla(144, 80%, 40%, 0.75)',
 						'-webkit-transform': 'rotateY(90deg) translateZ(' + elementWidth / 2 + 'px)',
 						   '-moz-transform': 'rotateY(90deg) translateZ(' + elementWidth / 2 + 'px)',
 						    '-ms-transform': 'rotateY(90deg) translateZ(' + elementWidth / 2 + 'px)',
@@ -62,7 +62,7 @@ $.fn.renderCube = function() {
 		} else if($(this).hasClass('left')) {
 
 			$(this).css({
-				'background-color': 'hsla(216, 80%, 40%, 0.5)',
+				'background-color': 'hsla(216, 80%, 40%, 0.75)',
 						'-webkit-transform': 'rotateY(-90deg) translateZ(' + elementWidth / 2 + 'px)',
 						   '-moz-transform': 'rotateY(-90deg) translateZ(' + elementWidth / 2 + 'px)',
 						    '-ms-transform': 'rotateY(-90deg) translateZ(' + elementWidth / 2 + 'px)',
@@ -73,7 +73,7 @@ $.fn.renderCube = function() {
 		} else if($(this).hasClass('bottom')) {
 
 			$(this).css({
-				'background-color': 'hsla(288, 80%, 40%, 0.5)',
+				'background-color': 'hsla(288, 80%, 40%, 0.75)',
 						'-webkit-transform': 'rotateX(-90deg) translateZ(' + elementHeight / 2 + 'px)',
 						   '-moz-transform': 'rotateX(-90deg) translateZ(' + elementHeight / 2 + 'px)',
 						    '-ms-transform': 'rotateX(-90deg) translateZ(' + elementHeight / 2 + 'px)',
@@ -84,7 +84,7 @@ $.fn.renderCube = function() {
 		} else if($(this).hasClass('back')) {
 
 			$(this).css({
-				'background-color': 'hsla(360, 80%, 40%, 0.5)',
+				'background-color': 'hsla(150, 80%, 40%, 0.75)',
 						'-webkit-transform': 'rotateY(-180deg) translateZ(' + elementWidth / 2 + 'px)',
 						   '-moz-transform': 'rotateY(-180deg) translateZ(' + elementWidth / 2 + 'px)',
 						    '-ms-transform': 'rotateY(-180deg) translateZ(' + elementWidth / 2 + 'px)',
@@ -112,13 +112,13 @@ $(document).ready(function() {
 	$('.direction').click(function() {
 
 		if( $(this).hasClass('move-up') ) {
-			rotateItX += 90;
-		} else if( $(this).hasClass('move-down') ) {
 			rotateItX -= 90;
+		} else if( $(this).hasClass('move-down') ) {
+			rotateItX += 90;
 		} else if( $(this).hasClass('move-right') ) {
-			rotateItY += 90;
-		} else if( $(this).hasClass('move-left') ) {
 			rotateItY -= 90;
+		} else if( $(this).hasClass('move-left') ) {
+			rotateItY += 90;
 		}
 
 		$('.cube').css({
